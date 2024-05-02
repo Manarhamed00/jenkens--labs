@@ -34,19 +34,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to EC2') {
-            steps {
-                // Use SSH to connect to your EC2 instance and execute Docker commands
-                script {
-                     if (isUnix()) {
-                sh 'ssh -i home/newkey.pem ec2-user@3.87.252.140 "docker pull manarhamed00/my-django-app:latest && docker run -d manarhamed00/my-django-app:latest"'
-            } else {
-                bat 'ssh -i C:\\Users\\smart\\Downloads\\newkey.pem ec2-user@3.87.252.140 "docker pull manarhamed00/my-django-app:latest && docker run -d manarhamed00/my-django-app:latest"'
-
-
-                    }
-                }
-            }
-        }
     }
 }
+
+
