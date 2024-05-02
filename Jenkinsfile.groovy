@@ -41,8 +41,8 @@ pipeline {
                      if (isUnix()) {
                 sh 'ssh -i home/newkey.pem ec2-user@3.87.252.140 "docker pull manarhamed00/my-django-app:latest && docker run -d manarhamed00/my-django-app:latest"'
             } else {
-                bat 'ssh -i C:\downloads\newkey.pem ec2-user@3.87.252.140 "docker pull manarhamed00/my-django-app:latest && docker run -d manarhamed00/my-django-app:latest"
-'
+                bat 'ssh -i C:\\downloads\\newkey.pem ec2-user@3.87.252.140 "docker pull manarhamed00/my-django-app:latest && docker run -d manarhamed00/my-django-app:latest"'
+
                     }
                 }
             }
