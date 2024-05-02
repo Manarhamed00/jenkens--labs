@@ -15,9 +15,9 @@ pipeline {
                 // Use conditional execution based on the operating system
                 script {
                     if (isUnix()) {
-                        sh 'pip install -r requirements.txt'
+                        sh 'pip install -r myproject\requirements.txt'
                     } else {
-                        bat 'pip install -r requirements.txt'
+                        bat 'pip install -r myproject\requirements.txt'
                     }
                 }
             }
