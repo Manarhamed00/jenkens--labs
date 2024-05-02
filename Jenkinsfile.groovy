@@ -27,9 +27,9 @@ pipeline {
                 // Use conditional execution based on the operating system
                 script {
                     if (isUnix()) {
-                        sh 'python manage.py test'
+                        sh 'python myproject/manage.py test'
                     } else {
-                        bat 'python manage.py test'
+                        bat 'python myproject/manage.py test'
                     }
                 }
             }
