@@ -16,26 +16,26 @@ Before you begin, make sure you have the following software installed on your ma
 
 -Installation
 
-  Clone the repository to your local machine:
+ 1- Clone the repository to your local machine:
 
   git clone https://github.com/Manarhamed00/jenkens--labs.git
 
-  Navigate to the project directory:
+ 2- Navigate to the project directory:
 
   cd jenkens--labs
 
-  Install project dependencies:
+ 3- Install project dependencies:
 
   pip install -r myproject/requirements.txt
 
 
-Running Tests
+ 4- Running Tests
 
-To run the automated tests for this system, execute the following command:
+ To run the automated tests for this system, execute the following command:
 
-python myproject/manage.py test
+ python myproject/manage.py test
 
-Usage
+5- Usage
 
 To start the Django development server, run the following command:
 
@@ -44,7 +44,7 @@ python myproject/manage.py runserver
 You can now access the application at http://localhost:8000 in your web browser.
 
 
-Tools Used
+6- Tools Used
 
     Jenkins: Jenkins is used for continuous integration and deployment automation.
     Django: Django is a high-level Python web framework for rapid development.
@@ -53,14 +53,14 @@ Tools Used
     Python: Python is the programming language used for development.
 
 
-Webhooks
+7- Webhooks
 
 To trigger Jenkins pipeline builds automatically on code changes, set up a webhook in your GitHub repository with the following URL:
 
 http://your-jenkins-server/github-webhook/
 
 
-Contributing
+8- Contributing
 
 We welcome contributions from the community! If you'd like to contribute to this project, please follow these steps:
 
