@@ -4,17 +4,34 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                 checkout([$class: 'GitSCM', branches: [[name: 'develop1']], userRemoteConfigs: [[url: 'https://github.com/Manarhamed00/jenkens--labs']]])
+                script {
+                    // Checkout from Git
+                    checkout([$class: 'GitSCM', branches: [[name: 'develop1']], userRemoteConfigs: [[url: 'https://github.com/Manarhamed00/jenkens--labs']]])
+                }
             }
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                // Use conditional execution based on the operating system
+                script {
+                    if (isUnix()) {
+                        sh 'pip install -r requirements.txt'
+                    } else {
+                        bat 'pip install -r requirements.txt'
+                    }
+                }
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'python manage.py test'
+                // Use conditional execution based on the operating system
+                script {
+                    if (isUnix()) {
+                        sh 'python manage.py test'
+                    } else {
+                        bat 'python manage.py test'
+                    }
+                }
             }
         }
     }
