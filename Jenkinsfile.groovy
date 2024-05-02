@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Manarhamed00/jenkens--labs'
+                 checkout([$class: 'GitSCM', branches: [[name: 'develop1']], userRemoteConfigs: [[url: 'https://github.com/Manarhamed00/jenkens--labs']]])
             }
         }
         stage('Install Dependencies') {
