@@ -102,7 +102,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/YourRepo/3tier-app.git'  // استبدل بالرابط الفعلي
+                git 'https://github.com/YourRepo/3tier-app.git'  
             }
         }
 
