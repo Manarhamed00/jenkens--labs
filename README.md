@@ -24,7 +24,7 @@ The entire setup is containerized using **Docker Compose**.
 │   │── Dockerfile    # Dockerfile for Metabase
 │
 │── docker-compose.yml # Orchestration file for services
-│── Jenkinsfile       # CI/CD pipeline configuration
+│── Jenkinsfile       # pipeline configuration
 ```
 
 ---
